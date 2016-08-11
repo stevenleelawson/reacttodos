@@ -9,7 +9,7 @@ const todos = [
   },
   {
     task: 'pet Roscoe',
-    isCompleted: true
+    isCompleted: false
   }
 ]
 export default class App extends React.Component{
@@ -24,17 +24,40 @@ export default class App extends React.Component{
     return (
       <div>
         <h1>React To Dos</h1>
-        <CreateToDo />
+        <CreateToDo todos={this.state.todos} createTask={this.createTask.bind(this)} />
         <ToDosList
           todos={this.state.todos}
-          createTask={this.createTask.bind()}
+          toggleTask={this.toggleTask.bind(this)}
+          saveTask={this.saveTask.bind(this)}
+          deleteTask={this.deleteTask.bind(this)}
           />
       </div>
     );
   }
 
-  createTask(task){
-
+  toggleTask(task) {
+      const foundTodo = _.find(this.state.todos, todo => todo.task === task)
+      foundTodo.isCompleted = !foundTodo.isCompleted
+      this.setState({ todos: this.state.todos })
   }
 
+  createTask(task){
+    this.state.todos.push({
+      task, //es6 = task: task
+      isCompleted: false
+    })
+    this.setState({ todos: this.state.todos })
+  }
+
+  saveTask(oldTask, newTask) {
+    const foundTodo = _.find(this.state.todos, todo => todo.task === oldTask)
+
+    foundTodo.task = newTask
+    this.setState({ todos: this.state.todos })
+  }
+
+  deleteTask(taskToDelete) {
+    _.remove(this.state.todos, todo => todo.task === taskToDelete)
+    this.setState({ todos: this.state.todos })
+  }
 }

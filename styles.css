@@ -3,7 +3,7 @@ button {
   padding: 5px 10px;
   margin: 5px;
   border-radius: 5px;
-  font-family: fantasy;
+  font-family: arial;
   font-size: 15px;
   border: none;
 }
@@ -23,5 +23,5 @@ input {
   align-items: center;*/
 }
 table {
-  margin-top: 40px; 
+  margin-top: 40px;
 }
