@@ -1,0 +1,27 @@
+button {
+  background-color: rgb(161, 140, 249);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: fantasy;
+  font-size: 15px;
+  border: none;
+}
+body {
+  font-family: courier;
+  color: rgb(34, 35, 36);
+}
+input {
+  height: 30px;
+  width: 200px;
+}
+
+.wrapper {
+  margin: 30px;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+table {
+  margin-top: 40px; 
+}
