@@ -10,6 +10,7 @@ button {
 body {
   font-family: courier;
   color: rgb(34, 35, 36);
+  margin: 20px;
 }
 input {
   height: 30px;
@@ -24,4 +25,11 @@ input {
 }
 table {
   margin-top: 40px;
+}
+
+.sidebar {
+  height: 500px;
+}
+.column-check {
+  
 }

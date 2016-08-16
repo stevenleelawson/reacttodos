@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>React To Dos App</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-  </head>
-<div class="wrapper">
+</head>
 
-  <body>
+<body>
+  <div class="container">
+    <p class="navbar navbar-default">This div has classes of: navbar navbar-default</p>
+
+        <div class="row column-check">
+            <div class="col-md-4 well">
+                This is a 4/12 column
+            </div>
+            <div class="col-md-4 well">
+                This is a 4/12 column
+            </div>
+        </div>
     <!-- <h1>hello!!!!</h1> -->
-    <div id="app"/>
+    <div class="row">
+        <div class="col-md-4 well sidebar">
+            This is a sidebar, created using a 4/12 column. The main section to the right (div id="app") has a class of col-md-8.
+        </div>
+        <div class="col-md-8" id="app" />
+    </div>
+  </div>
 
     <script src="bundle.js"></script>
-  </body>
-</div>
+</body>
+
 </html>
